@@ -1,0 +1,29 @@
+{
+  "name": "bodyfatcalculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.html",
+  "scripts": {
+    "start": "webpack-dev-server --devtool eval --progress --hot --colors --content-base build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bjorngi/bodyfatcalculator.git"
+  },
+  "author": "bjorngi@github",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjorngi/bodyfatcalculator/issues"
+  },
+  "homepage": "https://github.com/bjorngi/bodyfatcalculator",
+  "devDependencies": {
+    "css-loader": "^0.10.1",
+    "jsx-loader": "^0.13.1",
+    "react": "^0.13.1",
+    "reflux": "^0.2.7",
+    "style-loader": "^0.10.2",
+    "webpack": "^1.8.5",
+    "webpack-dev-server": "^1.8.0"
+  }
+}
