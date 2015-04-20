@@ -14,7 +14,7 @@ var NumberInput = React.createClass({
                 <div id={this.props.id}>
                     <label for={this.props.labelId}>
                         {this.props.label}
-                    </label>
+                    </label><br/>
                     <input 
                         id={this.props.labelId}
                         type='number'

@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/index.html",
   "scripts": {
-    "start": "webpack-dev-server --devtool eval --progress --hot --colors --content-base build",
+    "start": "webpack-dev-server --devtool eval --host 172.16.42.42 --progress --hot --colors --content-base build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,5 +25,8 @@
     "style-loader": "^0.10.2",
     "webpack": "^1.8.5",
     "webpack-dev-server": "^1.8.0"
+  },
+  "dependencies": {
+    "classnames": "^1.2.0"
   }
 }

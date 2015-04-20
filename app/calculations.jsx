@@ -27,7 +27,7 @@ var Calculations = {
         return this.sex(data);
     },
     sex(data) {
-        var gurka = 0;
+        var gurka = 12.2;
         if(data.sex === "boy") {
             gurka += parseFloat(this.variables.gurka.boy)
         }
@@ -65,47 +65,65 @@ var Calculations = {
     },
 
     equation(gurka, data) {
+        var regulations = {
+            gurka: gurka,
+            gr: 0,
+            bodyfat: null
+        }
+
         var sft = data.subscapular + data.tricep;
-        var gr = 0
 
         if(data.sex === "boy") {
+
             if(data.tanner < 3) {
                 if(data.caucasian) {
-                    gr += parseFloat(this.variables.gr.prepubescentaWhiteBoy);
+                    regulations.gr += parseFloat(this.variables.gr.prepubescentaWhiteBoy);
                 } if(!data.caucasian) {
-                    gr += parseFloat(this.variables.gr.prepubescentBlackBoy);
+                    regulations.gr += parseFloat(this.variables.gr.prepubescentBlackBoy);
                 }
             }
             if(data.tanner === 3) {
                 if(data.caucasian) {
-                    gr += parseFloat(this.variables.gr.pubescentWhiteBoy);
+                    regulations.gr += parseFloat(this.variables.gr.pubescentWhiteBoy);
                 } if(!data.caucasian) {
-                    gr += parseFloat(this.variables.gr.pubescentBlackBoy);
+                    regulations.gr += parseFloat(this.variables.gr.pubescentBlackBoy);
                 }
             }
             if(data.tanner > 3) {
                 if(data.caucasian) {
-                    gr += parseFloat(this.variables.gr.postpubescentWhiteBoy);
+                    regulations.gr += parseFloat(this.variables.gr.postpubescentWhiteBoy);
                 } if(!data.caucasian) {
-                    gr += parseFloat(this.variables.gr.postpubescentBlackBoy);
+                    console.log(this.variables.gr.postpubescentBlackBoy);
+                    
+                    regulations.gr += parseFloat(this.variables.gr.postpubescentBlackBoy);
                 }
             }
-            if(sft < 35) {
-                return 1.21*sft-(0.008*sft*sft)+gurka+gr
+            if(sft <= 35) {
+                regulations.bodyfat = (1.21*sft-(0.008*sft*sft)
+                +regulations.gurka
+                +regulations.gr)
             } else if (sft > 35) {
-                gr += parseFloat(this.variables.gr.maleM35);
-                return 1.21*sft-(0.008*sft*sft)+gurka+gr
+                regulations.gr = parseFloat(this.variables.gr.maleM35);
+                regulations.bodyfat = (0.783*sft
+                +regulations.gurka
+                +regulations.gr)
             }
         }
         if(data.sex === "girl") {
-            if(sft < 35) {
-                gr += parseFloat(this.variables.gr.femaleLE35)
-                return 1.33*sft-(0.013*sft*sft)+gurka+gr
+            if(sft <= 35) {
+                regulations.gr += parseFloat(this.variables.gr.femaleLE35)
+                regulations.bodyfat = 1.33*sft-(0.013*sft*sft) 
+                +regulations.gurka
+                +regulations.gr
+
             } else if(sft > 35) {
-                gr += parseFloat(this.variables.gr.femaleM35)
-                return 0.546*sft+gurka+gr
+                regulations.gr += parseFloat(this.variables.gr.femaleM35)
+                regulations.bodyfat = 0.546*sft
+                +regulations.gurka
+                +regulations.gr
             }
         }
+        return regulations;
     }
 }
 module.exports = Calculations;

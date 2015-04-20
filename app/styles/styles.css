@@ -1,11 +1,116 @@
+html {
+    font-family: Areal, Helvetica, sans-serif;
+}
+html h1 {
+}
+body {
+    background-color: hsl(0, 16%, 96%);
+}
+select {
+    border: solid 1px #ccc;
+    background: transparent;
+    padding: 1px;
+    -webkit-apperance: none;
+    -moz-apperance: none;
+}
+
+
+select, input {
+    font-size: 1.4em;
+}
+
+.header {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+.formWrapper {
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 0 auto 0 auto;
+    border: solid 1px gray;
+    background-color: white;
+}
 .span {
-    width: 30%;
-    float: left;
+    padding: 1em;
+}
+
+.span-1 {
+    border-bottom: solid 1px #ccc;
+}
+
+.span-1 * {
+}
+
+.fullwidth * {
+    width: 100%;
 
 }
-.span-1 {
-    padding-left: 20%;
 
 .span-2 {
-    font-size: 2em;
+    height: 100%;
+    vertical-align: top;
+    text-align: center;
 }
+
+
+.slider #tanner {
+    width 40%;
+}
+
+.slider #tannerval * {
+    width: 30%
+}
+
+.slider #tanner, #tannerVal {
+    display: inline-block;
+}
+
+
+
+@media only screen and (min-width: 750px), screen and (orientation: landscape and min-height: 750px) {
+    label {
+        font-size: 1.1em;
+    }
+    select, input {
+        font-size: 1em;
+    }
+    .header {
+        font-size: 1.5em;
+    }
+    .span {
+        box-sizing: border-box;
+        width: 50%;
+        display: inline-block;
+        top: 0%;
+        padding: 1em;
+
+    }
+    .span-1 * {
+        width: 100%;
+    }
+    .span-2 {
+
+    }
+    .span-1 {
+        border-bottom: none;
+        border-right: solid 1px #ccc;
+
+    }
+}
+@media only screen and (min-width: 750px) {
+    .formWrapper {
+        width: 750px;
+    }
+}
+
+@media screen and (orientation: landscape and min-height: 750px) {
+    .formWrapper: 750px;
+}
+
+.ans {
+    font-size: 100px;
+}
+
+
