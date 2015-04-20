@@ -54,7 +54,6 @@ var Form = React.createClass({
             <div className='formWrapper'>
                 <div className="span span-1 fullwidth">
                     <div id='about'>
-
                         <label for='sex'>Kjønn</label>
                         <select id='sex' onChange={this.changeSex}>
                             <option value="boy">Gutt</option>
@@ -67,13 +66,13 @@ var Form = React.createClass({
                             <option value="other">Andre</option>
                         </select> 
 
-                    </div>
 
-                    <label for='gmfcs'>CP-grad</label><br/>
-                    <select id='gmcfs' onChange={this.setGMFCS}>
-                        <option value="1">GMFCS I & II</option>
-                        <option value="3">GMFCS III, IV & V</option>
-                    </select>
+                        <label for='gmfcs'>CP-grad</label><br/>
+                        <select id='gmcfs' onChange={this.setGMFCS}>
+                            <option value="1">GMFCS I & II</option>
+                            <option value="3">GMFCS III, IV & V</option>
+                        </select>
+                    </div>
 
                     <div className='slider'>
                         <label for='tanner'>Pubertetsutvikling (Tanner: {this.state.data.tanner})</label><br/>

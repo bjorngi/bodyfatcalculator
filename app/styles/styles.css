@@ -19,6 +19,10 @@ select, input {
     font-size: 1.4em;
 }
 
+#about select {
+    margin: 0 0 0.5em 0;
+}
+
 .header {
     font-size: 1.2em;
     text-align: center;
