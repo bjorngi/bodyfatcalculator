@@ -5,7 +5,6 @@ var Reflux = require('reflux');
 var NumberInput = require('components/number');
 var Summary = require('components/summary');
 var actions = require('actions');
-require('styles/styles.css');
 
 var CalculationStore = require('stores/calculationStore');
 

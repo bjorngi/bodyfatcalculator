@@ -3,7 +3,7 @@ var React = require('react');
 // Components
 
 var Form = require('components/form');
-
+require('styles/styles.css')
 
 var App = React.createClass({
     render() {

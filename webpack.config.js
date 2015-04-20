@@ -3,7 +3,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: {
         app: [
-            'webpack/hot/dev-server',
+            //'webpack/hot/dev-server',
             './app/app.jsx'
         ]
     },
@@ -17,7 +17,7 @@ module.exports = {
             'app', 
             'assets', 
             'node_modules',
-        'vendor/pickadate/lib'],
+        ],
         extensions: ['', '.js', '.jsx', '.css', '.ttf']
     },
 
