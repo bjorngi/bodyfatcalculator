@@ -76,7 +76,8 @@ select, input {
 
 
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 750px), 
+screen and (orientation: landscape and min-height: 750px and min-width: 750px) {
     label {
         font-size: 1.1em;
     }
@@ -115,7 +116,3 @@ select, input {
 @media only screen and (orientation: landscape and min-height: 750px) {
     .formWrapper: 750px;
 }
-
-
-
-
