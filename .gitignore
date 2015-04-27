@@ -1,4 +1,4 @@
-build/
+build/bundle.js
 node_modules/
 *.swp
 npm-debug.log
