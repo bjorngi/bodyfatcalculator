@@ -3,7 +3,6 @@ var webpack = require('webpack');
 module.exports = {
     entry: {
         app: [
-            //'webpack/hot/dev-server',
             './app/app.jsx'
         ]
     },

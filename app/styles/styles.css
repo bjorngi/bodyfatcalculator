@@ -70,10 +70,13 @@ select, input {
 .slider #tanner, #tannerVal {
     display: inline-block;
 }
+.ans {
+    font-size: 100px;
+}
 
 
-
-@media only screen and (min-width: 750px), screen and (orientation: landscape and min-height: 750px) {
+@media only screen and (min-width: 100em), 
+only screen and (orientation: landscape and min-height: 100em and min-width: 100em) {
     label {
         font-size: 1.1em;
     }
@@ -103,18 +106,12 @@ select, input {
 
     }
 }
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 100em) {
     .formWrapper {
         width: 750px;
     }
 }
 
-@media screen and (orientation: landscape and min-height: 750px) {
+@media only screen and (orientation: landscape and min-height: 100em) {
     .formWrapper: 750px;
 }
-
-.ans {
-    font-size: 100px;
-}
-
-

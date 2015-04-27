@@ -13,9 +13,9 @@ var Summary = React.createClass({
 
     },
     valid() {
-        if(this.state.data.subscapular === 0 || 
-           this.state.data.tricep === 0 || 
-               this.getSFT() > 60){
+        if(this.state.data.subscapular <= 0 || 
+           this.state.data.tricep <= 0 || 
+           this.getSFT() > 60){
             return false
         } 
         return true;
@@ -52,7 +52,7 @@ var Summary = React.createClass({
     render() {
         return (
             <div className='summary'>
-                <h2 className='header'>Kroppsfett (%BFI)</h2>
+                <h2 className='header'>Kroppsfett (BF%)</h2>
                 <div className='ans'>{this.getBodyfat()}</div>
                 <div className='info'>
                     {this.getInfo()}
